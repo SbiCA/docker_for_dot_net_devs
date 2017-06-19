@@ -1,0 +1,5 @@
+version: 3
+
+  web_app_service:
+    image: ./web_app
+    
