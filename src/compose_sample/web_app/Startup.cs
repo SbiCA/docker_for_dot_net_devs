@@ -32,7 +32,7 @@ namespace web_app
 
             services.AddDistributedRedisCache(options =>
             {
-                options.Configuration = "localhost";
+                options.Configuration = "redis:6379";
                 options.InstanceName = "SampleInstance";
             });
         }

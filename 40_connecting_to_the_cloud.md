@@ -1,4 +1,4 @@
-# Creating a swarm cluster in azure
+<!--# Creating a swarm cluster in azure
 
 use the compose file from before.
 
@@ -24,4 +24,4 @@ Setup watch dog
 
 https://docs.microsoft.com/en-us/azure/container-service/container-service-deployment
 
-https://docs.microsoft.com/en-us/azure/container-service/container-service-connect
+https://docs.microsoft.com/en-us/azure/container-service/container-service-connect-->

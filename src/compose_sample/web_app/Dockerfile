@@ -1,14 +1,15 @@
-FROM microsoft/aspnetcore-build:1.1 as publish
-WORKDIR /publish
-COPY .bowerrc bower.json ./
-RUN bower install
-COPY my-app.csproj .
-RUN dotnet restore
-COPY . .
-RUN dotnet publish --output ./out
+#Builder
+FROM microsoft/dotnet:1.1-sdk as builder
+WORKDIR /app
+COPY ./web_app.csproj .
 
+RUN dotnet restore /app/web_app.csproj
+RUN dotnet build -c release .
+RUN dotnet publish -c release -o pubdir .
+
+#Final Build
 FROM microsoft/dotnet:1.1-runtime
-WORKDIR /dotnetapp
-COPY --from=publish /publish/out .
-ENV ASPNETCORE_URLS "http://0.0.0.0:5000/"
-ENTRYPOINT ["dotnet", "web_app.dll"]
+COPY --from=builder /app/pubdir /app
+ENV ASPNETCORE_URLS http://+:5000
+ENTRYPOINT ["dotnet", "/app/web_app.dll"]
+EXPOSE 5000

@@ -197,18 +197,15 @@ Here is an example for the console app
 #Builder
 FROM microsoft/dotnet:1.1-sdk
 
-WORKDIR /app
-# copy csproj and restore as distinct layers
-COPY net_core_console.csproj ./
-# restore nuget packages
-RUN dotnet restore
-
-RUN dotnet restore  && \
-	dotnet publish -c Release -o out
+# copy all source
+COPY . /myapp
+RUN dotnet restore ./myapp && \
+    dotnet build -c release ./myapp && \
+    dotnet publish -c release -o pubdir ./myapp
 
 #Final Build
 FROM microsoft/dotnet:1.1-runtime
-COPY --from=0 /app/out /myapp
+COPY --from=0 /myapp/pubdir /myapp
 
 ENTRYPOINT ["dotnet", "/app/net_core_console.dll"]
 ```
