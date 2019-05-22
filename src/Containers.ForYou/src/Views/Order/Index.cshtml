@@ -1,0 +1,22 @@
+﻿@model Home.Models.OrderForm
+
+@{
+    ViewBag.Title = "Order your containers";
+}
+
+<h2>Order your pumps</h2>
+
+<form method="post" action="@Url.Action("Register", "Order")">
+    
+    @Html.AntiForgeryToken()
+    <legend>Add Customer</legend>
+    <div class="col-lg-12>
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email)
+        </div>
+        <div class="col-lg-12>
+        @Html.LabelFor(m => m.NumberOfUnits)
+        @Html.TextBoxFor(m => m.NumberOfUnits)
+    </div>
+    <input type="submit" value="Order stuff"/>
+</form>
