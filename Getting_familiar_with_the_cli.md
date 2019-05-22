@@ -1,6 +1,6 @@
 # Fire up your first container
 ```docker
-docker run -it helloworld
+docker run -it hello-world
 ```
 
 

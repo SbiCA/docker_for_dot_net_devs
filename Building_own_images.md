@@ -74,7 +74,7 @@ docker run --rm -it myimage:0.1
 # Working with your local registry
 ```Docker
 # check your local registry
-docker images
+docker image ls
 
 # remove an image
 docker rmi {image id}
@@ -171,16 +171,6 @@ Some examples for tagging
 [When working with windows use other escape character !](https://docs.docker.com/engine/reference/builder/#escape)
 
 
-# Create new web app
-
-1. File new => .net core wep app mvc (no auth), but feel free to choose your stack.
-2. Create your Dockerfile and build it
-3. Run container in the background
-
-```Docker
-docker run -d myimage
-
-```
 
 # Multi stage containers
 
@@ -209,50 +199,4 @@ COPY --from=0 /myapp/pubdir /myapp
 
 ENTRYPOINT ["dotnet", "/app/net_core_console.dll"]
 ```
-
-
-<!--# defines base image
-FROM microsoft/dotnet:1.1-sdk
-# set the working directory for following commands
-WORKDIR /app
-
-# copy csproj and restore as distinct layers
-COPY net_core_console.csproj ./
-# restore nuget packages
-RUN dotnet restore
-
-# copy and build everything else
-COPY . ./
-# run publish
-RUN dotnet publish -c Release -o out
-
-# define the entry point when the container gets executed
-ENTRYPOINT ["dotnet", "out/net_core_console.dll"]-->
-
-<!--```docker
-# use the builder image including the sdk
-FROM aspnetcore-builder sdk AS builder
-
-# build the source code
-dotnet build
-
-# run the unit tests
-dotnet test
-
-# target container base image (runtime only)
-FROM aspnetcore runtime
-
-# copy the builder output to target
-COPY --from=builder /out/myapp /myapp
-
-#set the working dir
-WORKDIR /myapp
-
-# define entry point
-dotnet myservice.dll
-
-# and the health check
-HealthCheck --interval=3s
-
-```-->
 
