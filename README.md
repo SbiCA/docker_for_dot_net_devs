@@ -1,4 +1,4 @@
-# Container for .NET devs
+# Containers for .NET DEVs
 
 ## hello world with Linux containers
 see [Getting familiar](Getting_familiar_with_the_cli.md)
@@ -8,9 +8,15 @@ see ['hello world'  with Windows Containers](Windows_containers.md)
 
 
 # Prerequisits
+- Installed docker
+- VS Code with docker extension
+- VS 2019
 
+In case you could need some help :smile:
 
-# References addiotional material
+https://github.com/wsargent/docker-cheat-sheet
+
+# References additional material
 
 ## Docker related links
 - https://docs.docker.com/develop/develop-images/dockerfile_best-practices 
