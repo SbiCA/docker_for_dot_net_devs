@@ -24,6 +24,7 @@ https://github.com/wsargent/docker-cheat-sheet
 - https://github.com/wsargent/docker-cheat-sheet
 - https://docs.docker.com/compose/compose-file/
 - https://docs.docker.com/engine/docker-overview/
+- https://blogs.msdn.microsoft.com/stevelasker/2018/03/01/docker-tagging-best-practices-for-tagging-and-versioning-docker-images/
 
 ## Courses + self learning
 - https://www.pluralsight.com/courses/modernizing-dotnet-framework-apps-docker
