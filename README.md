@@ -87,6 +87,7 @@ https://github.com/wsargent/docker-cheat-sheet
 - Portainer https://www.portainer.io/
 - Visualizer https://github.com/dockersamples/docker-swarm-visualizer
 - Dive https://github.com/wagoodman/dive
+- DockerCompletion https://github.com/matt9ucci/DockerCompletion
 
 ## Alternative(s) and other fancy stuff
 - https://www.opencontainers.org/
