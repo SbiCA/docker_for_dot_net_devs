@@ -1,0 +1,16 @@
+    
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-2019' 
+
+variables:
+  dockerId: trapp91  
+  imageName: 'containers-for-you-home:$(build.buildNumber)'
+
+steps:
+- script: |
+    docker build -t $(dockerId)/$(imageName) src/Containers.ForYou/src
+    docker login -u $(dockerId) -p $(dockerPassword) 
+    docker push $(dockerId)/$(imageName)
