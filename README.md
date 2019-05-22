@@ -63,6 +63,7 @@ https://github.com/wsargent/docker-cheat-sheet
 - https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/system-requirements
 
 ## Building .NET applications
+- https://github.com/microsoft/dotnet-framework-docker/tree/master/samples
 - https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2019-update/
 - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-2.2
 - https://www.hanselman.com/blog/ASPNETCoreArchitectDavidFowlersHiddenGemsIn21.aspx
@@ -87,6 +88,7 @@ https://github.com/wsargent/docker-cheat-sheet
 - Portainer https://www.portainer.io/
 - Visualizer https://github.com/dockersamples/docker-swarm-visualizer
 - Dive https://github.com/wagoodman/dive
+- DockerCompletion https://github.com/matt9ucci/DockerCompletion
 
 ## Alternative(s) and other fancy stuff
 - https://www.opencontainers.org/
