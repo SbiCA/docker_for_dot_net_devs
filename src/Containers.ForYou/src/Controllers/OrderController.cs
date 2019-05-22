@@ -56,22 +56,6 @@ namespace Home.Controllers
                 await dbContext.SaveChangesAsync();
                 // TODO send out confirmation email
             }
-            // https://dwwx.space/
-
-            // TODO use rabbit mq 
-
-            // https://github.com/StefanScherer/dockerfiles-windows
-            // https://channel9.msdn.com/Events/Ignite/New-Zealand-2016/M402
-            // https://github.com/StefanScherer/dockerfiles-windows
-            // https://github.com/StefanScherer/dockerfiles-windows/tree/master/postgres
-            // https://github.com/StefanScherer/dockerfiles-windows/tree/master/elasticsearch
-            // https://github.com/StefanScherer/dockerfiles-windows/tree/master/portainer
-            // https://github.com/StefanScherer/dockerfiles-windows/tree/master/traefik
-            // https://blog.hypriot.com/post/dockerconaustin2017/
-
-
-            // https://github.com/Azure/aks-engine/blob/master/docs/topics/windows.md
-            // https://cloudblogs.microsoft.com/opensource/2019/03/25/windows-server-containers-now-supported-kubernetes/
             return RedirectToAction("ThankYou");
         }
 
