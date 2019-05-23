@@ -11,6 +11,6 @@ variables:
 
 steps:
 - script: |
-    docker build -t $(dockerId)/$(imageName)-f src/Containers.ForYou/src/Dockerfile src/Containers.ForYou
+    docker build -t $(dockerId)/$(imageName) -f src/Containers.ForYou/src/Dockerfile src/Containers.ForYou
     docker login -u $(dockerId) -p $(dockerPassword) 
     docker push $(dockerId)/$(imageName)
