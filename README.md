@@ -16,6 +16,11 @@ In case you could need some help :smile:
 
 https://github.com/wsargent/docker-cheat-sheet
 
+## Sample project 
+see [containers for you](src/Containers.ForYou)
+
+[![Build Status](https://dev.azure.com/containers-for-you/containers-for-you/_apis/build/status/build-containers-for-you?branchName=master)](https://dev.azure.com/containers-for-you/containers-for-you/_build/latest?definitionId=1&branchName=master)
+
 # References additional material
 
 ## Docker related links
