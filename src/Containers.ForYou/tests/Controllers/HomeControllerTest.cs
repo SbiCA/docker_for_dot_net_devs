@@ -1,31 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Home;
+﻿using System.Web.Mvc;
 using Home.Controllers;
+using Xunit;
 
 namespace Home.Tests.Controllers
 {
-    [TestClass]
     public class HomeControllerTest
     {
-        [TestMethod]
-        public void Index()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Index() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
-        }
-
-        [TestMethod]
+        [Fact]
         public void About()
         {
             // Arrange
@@ -35,10 +16,10 @@ namespace Home.Tests.Controllers
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.Equal("Your application description page.", result.ViewBag.Message.ToString());
         }
 
-        [TestMethod]
+        [Fact]
         public void Contact()
         {
             // Arrange
@@ -48,7 +29,20 @@ namespace Home.Tests.Controllers
             ViewResult result = controller.Contact() as ViewResult;
 
             // Assert
-            Assert.IsNotNull(result);
+            Assert.NotNull(result);
+        }
+
+        [Fact]
+        public void Index()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.Index() as ViewResult;
+
+            // Assert
+            Assert.NotNull(result);
         }
     }
 }
