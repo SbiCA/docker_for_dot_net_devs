@@ -22,8 +22,7 @@ WORKDIR /app/tests
 RUN nuget restore containers.foryou.home.tests.csproj
 RUN msbuild /p:Configuration=Debug
 
-RUN dotnet vstest bin/Debug/net48/containers.foryou.home.tests.dll
-
+RUN dotnet vstest bin/Debug/net461/containers.foryou.home.tests.dll
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8 AS runtime
 WORKDIR /inetpub/wwwroot
 COPY --from=build /app/src/. ./
