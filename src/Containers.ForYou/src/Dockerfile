@@ -21,7 +21,8 @@ WORKDIR /app/tests
 # Hacky but it works for the moment ...
 RUN nuget restore containers.foryou.home.tests.csproj
 RUN msbuild /p:Configuration=Debug
-RUN dotnet vstest bin/Debug/Home.Tests.dll
+
+RUN dotnet vstest bin/Debug/net48/containers.foryou.home.tests.dll
 
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8 AS runtime
 WORKDIR /inetpub/wwwroot
