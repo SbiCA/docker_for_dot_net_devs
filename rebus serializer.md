@@ -6,3 +6,5 @@
             return localType ?? base.BindToType(assemblyName, typeName);
         }
     }
+    
+        .Serialization(s => s.UseNewtonsoftJson(new JsonSerializerSettings(){SerializationBinder = new ClassNameSerializationBinder()}));
