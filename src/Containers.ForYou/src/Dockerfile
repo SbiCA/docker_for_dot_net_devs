@@ -18,18 +18,10 @@ RUN msbuild /p:Configuration=Release
 
 FROM build AS testrunner
 WORKDIR /app/tests
-ENTRYPOINT ["dotnet", "test", "--logger:trx"]
-
-FROM build AS test
-WORKDIR /app/tests
-RUN dotnet build
+# Hacky but it works for the moment ...
+RUN nuget restore containers.foryou.home.tests.csproj
+RUN msbuild /p:Configuration=Debug
 RUN dotnet vstest bin/Debug/Home.Tests.dll
-
-
-#FROM build AS publish
-#WORKDIR /app/dotnetapp
-#RUN dotnet publish -c Release -o out
-
 
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8 AS runtime
 WORKDIR /inetpub/wwwroot
