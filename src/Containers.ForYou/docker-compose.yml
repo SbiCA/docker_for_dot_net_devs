@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  home:
+    build: 
+      dockerfile: src/Dockerfile
+      context: .
+    image: containers-for-you-home
+    ports: 
+      - 8080:80
+    
