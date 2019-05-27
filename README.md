@@ -89,6 +89,13 @@ see [containers for you](src/Containers.ForYou)
 - Introduction to gMSA​ https://blogs.technet.microsoft.com/askpfeplat/2012/12/16/windows-server-2012-group-managed-service-accounts/
 - https://myignite.techcommunity.microsoft.com/sessions/65885#ignite-html-anchor
 
+## Security
+- https://github.com/docker/docker-bench-security
+- https://github.com/coreos/clair/
+- https://docs.docker.com/engine/security/trust/content_trust/
+- https://github.com/theupdateframework/notary
+- https://github.com/theupdateframework/tuf
+
 ## Addtional tools
 - Portainer https://www.portainer.io/
 - Visualizer https://github.com/dockersamples/docker-swarm-visualizer
